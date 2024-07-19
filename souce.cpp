@@ -271,7 +271,7 @@ class BOOK
 		  int R;
 		  cout<<"\n enter student enroll";cin>>R;
 		  fstream f2;
-		 f2.open("F:/uma shankar/STUDENT.dat",ios::binary|ios::in);
+		 f2.open("D:/Anusha_Devi/STUDENT.dat",ios::binary|ios::in);
 		  f2.seekg(0,ios::beg);
 		  int h=0;
 		  while(!f2.eof())
@@ -300,7 +300,7 @@ class BOOK
 		 cout<<"\nenter enroll no whose record is to be modified:";
 		 cin>>c;
 		 fstream f3;
-		f3.open("F:/uma shankar/STUDENT.dat",ios::in|ios::out|ios::binary);
+		f3.open("D:/Anusha_Devi/STUDENT.dat",ios::in|ios::out|ios::binary);
 		while(!f3.eof())
 		 {
 			f3.read((char*)&S,sizeof(S));
@@ -327,9 +327,9 @@ class BOOK
 	int j;
 	cout<<"\nenter enroll no whose record is to be deleted:";cin>>j;
 	ifstream f4;
-	f4.open("F:/uma shankar/STUDENT.dat",ios::in|ios::binary);
+	f4.open("D:/Anusha_Devi/STUDENT.dat",ios::in|ios::binary);
 	ofstream f5;
-	f5.open("F:/uma shankar/STUDENT1.dat",ios::out|ios::binary);
+	f5.open("D:/Anusha_Devi/STUDENT1.dat",ios::out|ios::binary);
 	while(!f4.eof())
 	{
 		f4.read((char*)&S,sizeof(S));
@@ -340,8 +340,8 @@ class BOOK
 	}
 	f4.close();
 	f5.close();
-	remove("F:/uma shankar/STUDENT.dat");
-	rename("F:/uma shankar/STUDENT1.dat","F:/uma shankar/STUDENT.dat");
+	remove("D:/Anusha_Devi/STUDENT.dat");
+	rename("D:/Anusha_Devi/STUDENT1.dat","D:/Anusha_Devi/STUDENT.dat");
   }
 //************************************************//
                    //ADD FUNCTION//
@@ -351,7 +351,7 @@ class BOOK
   {
 	 STUDENT S;
 	 fstream f7;
-	 f7.open("F:/uma shankar/STUDENT.dat",ios::in|ios::out|ios::app|ios::binary);
+	 f7.open("D:/Anusha_Devi/STUDENT.dat",ios::in|ios::out|ios::app|ios::binary);
 	 S.CREATE();
 	 f7.write((char*)&S,sizeof(S));
 	 f7.close();
@@ -365,7 +365,7 @@ class BOOK
   {
   	 STUDENT S;
   	fstream f;
-	  f.open("F:/uma shankar/STUDENT.dat",ios::binary|ios::in);
+	  f.open("D:/Anusha_Devi/STUDENT.dat",ios::binary|ios::in);
  	 cout<<"\n ALL STUDENTS RECORDS";
 	f.seekg(0,ios::beg);
 	while(!f.eof())
@@ -384,7 +384,7 @@ void STUD_CREATE()
 	STUDENT S;
 	 ofstream f1;
 	 char A='Y';
-	  f1.open("F:/uma shankar/STUDENT.dat",ios::binary|ios::in|ios::out);
+	  f1.open("D:/Anusha_Devi/STUDENT.dat",ios::binary|ios::in|ios::out);
 	while(A=='Y')
 	 {
 		S.CREATE();
@@ -402,7 +402,7 @@ void BSEARCH()
 	 int T,j=0;
 	` cout<<"\n enter book no";cin>>T;
 	  fstream Q2;
-	Q2.open("F:/uma shankar/BOOK.dat",ios::in|ios::binary);
+	Q2.open("D:/Anusha_Devi/BOOK.dat",ios::in|ios::binary);
 	  Q2.seekg(0,ios::beg);
 	 while(!Q2.eof())
 	 {
@@ -430,7 +430,7 @@ void BSEARCH()
 	cout<<"\nenter book no whose record is to be modified:";
 	 cin>>p;
 	 fstream Q3;
-	Q3.open("F:/uma shankar/BOOK.dat",ios::in|ios::out|ios::binary);
+	Q3.open("D:/Anusha_Devi/BOOK.dat",ios::in|ios::out|ios::binary);
 	while(!Q3.eof())
 	 {
 		Q3.read((char*)&B,sizeof(B));
@@ -458,9 +458,9 @@ void BDELETE()
 	 int d;
 	cout<<"\nenter book no whose record is to be deleted:";cin>>d;
 	 ifstream Q4;
-	 Q4.open("F:/uma shankar/BOOK.dat",ios::in|ios::binary);
+	 Q4.open("D:/Anusha_Devi/BOOK.dat",ios::in|ios::binary);
 	 ofstream Q5;
-	 Q5.open("F:/uma shankar/BOOK1.dat",ios::out|ios::binary);
+	 Q5.open("D:/Anusha_Devi/BOOK1.dat",ios::out|ios::binary);
 	while(!Q4.eof())
 	{
 		Q4.read((char*)&B,sizeof(B));
@@ -471,8 +471,8 @@ void BDELETE()
 	}
 	Q4.close();
 	Q5.close();
-	remove("F:/uma shankar/BOOK.dat");
-	rename("F:/uma shankar/BOOK1.dat","F:/uma shankar/BOOK.dat");
+	remove("D:/Anusha_Devi/BOOK.dat");
+	rename("D:/Anusha_Devi/BOOK1.dat","D:/Anusha_Devi/BOOK.dat");
 	cout<<"\nRECORD IS DELETED!";
   }
 //************************************************//
@@ -483,7 +483,7 @@ void BDELETE()
   {
 	 BOOK B;
 	 fstream Q6;
-	 Q6.open("F:/uma shankar/BOOK.dat",ios::in|ios::out|ios::app|ios::binary);
+	 Q6.open("D:/Anusha_Devi/BOOK.dat",ios::in|ios::out|ios::app|ios::binary);
 	 B.BCREATE();
 	 Q6.write((char*)&B,sizeof(B));
 	 Q6.close();
@@ -497,7 +497,7 @@ void BDELETE()
   {
 	fstream Q;
 	BOOK B;
-	Q.open("F:/uma shankar/BOOK.dat",ios::binary|ios::in);
+	Q.open("D:/Anusha_Devi/BOOK.dat",ios::binary|ios::in);
 	 Q.seekg(0,ios::beg);
 	while(!Q.eof())
 	 {
@@ -516,7 +516,7 @@ void BDELETE()
 	 BOOK B;
 	 char Z='W';
 	 ofstream Q1;
-	 Q1.open("F:/uma shankar/BOOK.dat",ios::binary|ios::out);
+	 Q1.open("D:/Anusha_Devi/BOOK.dat",ios::binary|ios::out);
 	 while(Z=='W')
 	 {
 		 B.BCREATE();
@@ -535,7 +535,7 @@ void BDELETE()
 	 int T1;
 	 cout<<"\n enter book no";cin>>T1;
 	  fstream I3;
-	 I3.open("F:/uma shankar/BOOK.dat",ios::in|ios::binary|ios::out);
+	 I3.open("D:/Anusha_Devi/BOOK.dat",ios::in|ios::binary|ios::out);
 	 I3.seekg(0,ios::beg);
 	 while(!I3.eof())
 	 {
@@ -560,7 +560,7 @@ void BDELETE()
 	STUDENT S;
 	cout<<"\nenter STUDENT NO:";cin>>SNO;
 	fstream I;
-	I.open("F:/uma shankar/STUDENT.dat",ios::binary|ios::in|ios::out);
+	I.open("D:/Anusha_Devi/STUDENT.dat",ios::binary|ios::in|ios::out);
 	I.seekg(0,ios::beg);
 	while(!I.eof())
 	{
@@ -601,7 +601,7 @@ void BDELETE()
 	int T2;
 	cout<<"\n enter book no";cin>>T2;
 	fstream Z3;
-	Z3.open("F:/uma shankar/BOOK.dat",ios::in|ios::binary|ios::out);
+	Z3.open("D:/Anusha_Devi/BOOK.dat",ios::in|ios::binary|ios::out);
 	Z3.seekg(0,ios::beg);
 	while(!Z3.eof())
 	  {
@@ -627,7 +627,7 @@ void BDELETE()
 	STUDENT S;
 	BOOK B;
 	fstream Z;
-	Z.open("F:/uma shankar/STUDENT.dat",ios::binary|ios::in|ios::out);
+	Z.open("D:/Anusha_Devi/STUDENT.dat",ios::binary|ios::in|ios::out);
 	Z.seekg(0,ios::beg);
 	while(!Z.eof())
 	{
